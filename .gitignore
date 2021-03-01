@@ -1,35 +1,23 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/.vscode
-/.vagrant
-Homestead.json
-Homestead.yaml
+/vendor/
+node_modules/
 npm-debug.log
 yarn-error.log
-.DS_Store
 
-# Ignore shell history files
-/.*_hist*
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
 
-# Ignore temporary folder contents:
-/tmp/*
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
 
-# Ignore compiled css/js files (Why doesn't laravel ignore these by default?)
-#/public/css
-#/public/js
-#public/mix-manifest.json
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
 
-# Ignore node HOME artifacts:
-/.config
-/.npm
-/.node-gyp
-
-# Ignore vim files
-*.sw*
+storage/*.key
 .env
-# phpunit
+Homestead.yaml
+Homestead.json
+/.vagrant
 .phpunit.result.cache
