@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppSettingsTable extends Migration
+class CreateTaxdataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,20 @@ class CreateAppSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('app_settings');
-
-        Schema::create('app_settings', function (Blueprint $table) {
+        Schema::create('taxdatas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('layout')->default(1);
-            $table->integer('sidebar')->default(1);
-            $table->integer('navbar')->default(1);
+            $table->morphs('taxdataable');
+            $table->string('comments')->nullable();
+            $table->string('type')->default("moral");
+            $table->string('name');
+            $table->string('rfc', 20);
+
+            $table->string('payment_method')->nullable();
+            $table->string('way_to_pay')->nullable();
+            $table->string('use_of_cfdi')->nullable();
+            $table->string('email_invoice')->nullable();
+            $table->integer('credit_days')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
             $table->integer('created_by')->unsigned()->nullable();
@@ -38,6 +45,6 @@ class CreateAppSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_settings');
+        Schema::dropIfExists('taxdata');
     }
 }
