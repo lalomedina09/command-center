@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppSettingsTable extends Migration
+class CreateVaultTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateAppSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('app_settings');
-
-        Schema::create('app_settings', function (Blueprint $table) {
+        Schema::create('vault', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('layout')->default(1);
-            $table->integer('sidebar')->default(1);
-            $table->integer('navbar')->default(1);
+            $table->integer('status')->nullable();
+            $table->string('app')->nullable();
+            $table->string('url')->nullable();
+            $table->string('account')->nullable();
+            $table->text('password')->nullable();
+            $table->text('description')->nullable();//data encrypted
             $table->timestamps();
             $table->softDeletes();
             $table->integer('user_id')->unsigned()->nullable();
@@ -40,6 +41,6 @@ class CreateAppSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_settings');
+        Schema::dropIfExists('vault');
     }
 }
