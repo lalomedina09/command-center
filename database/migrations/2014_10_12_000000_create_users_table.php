@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
         });
 
         $data = array(
-            "name" => "Admin",
-            "username" => "admin",
+            "name" => "Lalo Medina",
+            "username" => "user_admin",
             "email" => "admin@gmail.com",
             "password" => bcrypt("admin123"),
         );

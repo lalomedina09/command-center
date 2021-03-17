@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@php
+ //dd(Auth::user()->appsetting, 'imprimiendo la variable de usuario');
+@endphp
 @section('content')
 <div class="contents">
    <div class="container-fluid">

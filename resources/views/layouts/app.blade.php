@@ -24,7 +24,7 @@
       {{-- Endinject --}}
       <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
    </head>
-   <body class="layout-light side-menu @auth() overlayScroll @endauth">
+   <body class="layout-dark side-menu @auth() overlayScroll @endauth">
       @auth()
       <div class="mobile-search"></div>
       <div class="mobile-author-actions"></div>
@@ -51,7 +51,7 @@
             </div>
          </span>
       </div>
-      @include('layouts.partials._customizer')
+      {{--@include('layouts.partials._customizer')--}}
       @endauth
       <div class="overlay-dark-sidebar"></div>
       <div class="customizer-overlay"></div>

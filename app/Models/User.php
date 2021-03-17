@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -21,9 +22,7 @@ class User extends Authenticatable
         'name',
         'username',
         'email',
-        'password',
-        'provider',
-        'provider_id'
+        'password'
     ];
 
     /**
@@ -44,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get Appsetting.
+     */
+    public function appsetting()
+    {
+        return $this->belongsTo('App\Models\AppSetting', 'id', 'user_id')->withTrashed();
+    }
 }

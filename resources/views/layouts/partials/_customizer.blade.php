@@ -3,14 +3,14 @@
    <div class="customizer-wrapper">
       <div class="customizer">
          <div class="customizer__head">
-            <h4 class="customizer__title">Customizer</h4>
-            <span class="customizer__sub-title">Customize your overview page layout</span>
+            <h4 class="customizer__title">Personalizador</h4>
+            <span class="customizer__sub-title">Personaliza el diseño de tu pagina de descripcion general</span>
             <a href="#" class="customizer-close">
             <span data-feather="x"></span></a>
          </div>
          <div class="customizer__body">
             <div class="customizer__single">
-               <h4>Layout Type</h4>
+               <h4>Tipo de diseño</h4>
                <ul class="customizer-list d-flex layout">
                   <li class="customizer-list__item">
                      <a href="{{ url('setlayout/ltr') }}" class="{{ (Session::get('layout') !=='rtl' ? 'active': '') }}">
@@ -28,7 +28,7 @@
             </div>
             <!-- ends: .customizer__single -->
             <div class="customizer__single">
-               <h4>Sidebar Type</h4>
+               <h4>Tipo de barra lateral</h4>
                <ul class="customizer-list d-flex l_sidebar">
                   <li class="customizer-list__item">
                      <a href="#" data-layout="light" class="active">
@@ -45,8 +45,9 @@
                </ul>
             </div>
             <!-- ends: .customizer__single -->
+            {{--
             <div class="customizer__single">
-               <h4>Navbar Type</h4>
+               <h4>Tipo de barra de navegación</h4>
                <ul class="customizer-list d-flex l_navbar">
                   <li class="customizer-list__item">
                      <a href="#" data-layout="side" class="active">
@@ -61,7 +62,7 @@
                      </a>
                   </li>
                </ul>
-            </div>
+            </div>--}}
             <!-- ends: .customizer__single -->
          </div>
       </div>
