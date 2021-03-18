@@ -44,11 +44,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * Get Appsetting.
-     */
-    public function appsetting()
+    public function notes()
     {
-        return $this->belongsTo('App\Models\AppSetting', 'id', 'user_id')->withTrashed();
+        return $this->hasMany('App\Models\Note', 'user_id', 'id');
     }
 }

@@ -1,0 +1,14 @@
+//agrega registrio en tabla de notes
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `color`, `label`, `fix`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('Camara Azul', 'ed maverick del rio', '#777777', '1', '1', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+
+//
+
+
+//
+
+//
+
+
+
+//

@@ -321,13 +321,14 @@
                 <!-- ends: .nav-support -->
                 <li class="nav-flag-select">
                     <div class="dropdown-custom">
-                        <a href="javascript:;" class="nav-item-toggle"><img src="{{ asset('img/flag.png') }}" alt=""
+                        <a href="javascript:;" class="nav-item-toggle">
+                            <img src="{{ asset('img/spa.png') }}" alt=""
                                                                             class="rounded-circle"></a>
                         <div class="dropdown-wrapper dropdown-wrapper--small">
-                            <a href=""><img src="{{ asset('img/ger.png') }}" alt=""> German</a>
-                            <a href=""><img src="{{ asset('img/spa.png') }}" alt=""> Spanish</a>
-                            <a href=""><img src="{{ asset('img/tur.png') }}" alt=""> Turkish</a>
-                            <a href=""><img src="{{ asset('img/eng.png') }}" alt=""> English</a>
+                            <a disabled href=""><img src="{{ asset('img/ger.png') }}" alt=""> Aleman</a>
+                            <a href=""><img src="{{ asset('img/spa.png') }}" alt=""> Español</a>
+                            <a disabled href=""><img src="{{ asset('img/tur.png') }}" alt=""> Turco</a>
+                            <a disabled href=""><img src="{{ asset('img/eng.png') }}" alt=""> Ingles</a>
                         </div>
                     </div>
                 </li>

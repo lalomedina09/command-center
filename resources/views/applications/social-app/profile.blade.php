@@ -9,7 +9,7 @@
          <div class="row">
             <div class="col-lg-12">
                <div class="breadcrumb-main">
-                  <h4 class="text-capitalize breadcrumb-title">My profile</h4>
+                  <h4 class="text-capitalize breadcrumb-title">Mi perfil</h4>
                   <div class="breadcrumb-action justify-content-center flex-wrap">
                      <div class="action-btn">
                         <div class="form-group mb-0">
@@ -26,13 +26,13 @@
                      </div>
                      <div class="dropdown action-btn">
                         <button class="btn btn-sm btn-default btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="la la-download"></i> Export
+                        <i class="la la-download"></i> Exportar
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                           <span class="dropdown-item">Export With</span>
+                           <span class="dropdown-item">Exportar con</span>
                            <div class="dropdown-divider"></div>
                            <a href="" class="dropdown-item">
-                           <i class="la la-print"></i> Printer</a>
+                           <i class="la la-print"></i> Impresora</a>
                            <a href="" class="dropdown-item">
                            <i class="la la-file-pdf"></i> PDF</a>
                            <a href="" class="dropdown-item">
@@ -45,10 +45,10 @@
                      </div>
                      <div class="dropdown action-btn">
                         <button class="btn btn-sm btn-default btn-white dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="la la-share"></i> Share
+                        <i class="la la-share"></i> Compartir
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                           <span class="dropdown-item">Share Link</span>
+                           <span class="dropdown-item">Compartir Link</span>
                            <div class="dropdown-divider"></div>
                            <a href="" class="dropdown-item">
                            <i class="la la-facebook"></i> Facebook</a>
@@ -64,7 +64,7 @@
                      </div>
                      <div class="action-btn">
                         <a href="" class="btn btn-sm btn-primary btn-add">
-                        <i class="la la-plus"></i> Add New</a>
+                        <i class="la la-plus"></i> Agregar</a>
                      </div>
                   </div>
                </div>
@@ -88,9 +88,9 @@
                            </div>
                            <div class="ap-button button-group d-flex justify-content-center flex-wrap">
                               <button type="button" class="border text-capitalize px-25 color-gray transparent shadow2 radius-md">
-                              <span data-feather="mail"></span>message</button>
+                              <span data-feather="mail"></span>Mensaje</button>
                               <button class="btn btn-primary btn-default btn-squared text-capitalize  px-25"><span data-feather="user-plus"></span>
-                              follow
+                              Seguir
                               </button>
                            </div>
                         </div>
@@ -98,15 +98,15 @@
                            <div class="profile-overview d-flex justify-content-between flex-wrap">
                               <div class="po-details">
                                  <h6 class="po-details__title pb-1">$72,572</h6>
-                                 <span class="po-details__sTitle">Total Revenue</span>
+                                 <span class="po-details__sTitle">Total de Ingresos</span>
                               </div>
                               <div class="po-details">
                                  <h6 class="po-details__title pb-1">3,257</h6>
-                                 <span class="po-details__sTitle">order</span>
+                                 <span class="po-details__sTitle">Pedidos</span>
                               </div>
                               <div class="po-details">
                                  <h6 class="po-details__title pb-1">74</h6>
-                                 <span class="po-details__sTitle">Products</span>
+                                 <span class="po-details__sTitle">Productos</span>
                               </div>
                            </div>
                         </div>
@@ -118,7 +118,7 @@
                      <div class="user-bio border-bottom">
                         <div class="card-header border-bottom-0 pt-sm-30 pb-sm-0  px-md-25 px-3">
                            <div class="profile-header-title">
-                              User Bio
+                              Mi Biografía
                            </div>
                         </div>
                         <div class="card-body pt-md-1 pt-0">
