@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Carbon\Carbon;
 
 class CreateNotesTable extends Migration
 {
@@ -17,9 +18,7 @@ class CreateNotesTable extends Migration
             $table->increments('id');
             $table->string('title')->nullable();
             $table->string('description')->nullable();
-            $table->string('color')->nullable();
-            $table->integer('label')->nullable();
-            $table->integer('fix')->nullable();
+            $table->string('label')->nullable();
             $table->integer('favorite')->nullable();
             $table->timestamps();
             $table->softDeletes();

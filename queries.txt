@@ -1,7 +1,21 @@
 //agrega registrio en tabla de notes
-INSERT INTO `centerdata`.`notes` (`title`, `description`, `color`, `label`, `fix`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
-VALUES ('Camara Azul', 'ed maverick del rio', '#777777', '1', '1', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('Fuentes de Ortiz', 'ed maverick del rio', 'personal', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
 
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('Karpie diem', 'ed maverick del rio', 'work', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('COsas', 'ed maverick del rio', 'social', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('Ropa de bazar', 'ed maverick del rio', 'personal', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('Los Jaqui', 'ed maverick del rio', 'important', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
+
+INSERT INTO `centerdata`.`notes` (`title`, `description`, `label`, `favorite`, `created_at`, `updated_at`, `user_id`, `created_by`, `updated_by`)
+VALUES ('1967 TRI', 'ed maverick del rio', 'work', '1', '2021-03-16 13:53:23', '2021-03-16 13:53:23', '1', '1', '1');
 //
 
 

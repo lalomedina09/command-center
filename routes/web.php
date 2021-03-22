@@ -94,7 +94,15 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/users-datatable', [UserController::class, 'usersDatatable'])->name('applications.users.usersDatatable');
         });
         Route::get('chat', [ChatController::class, 'index'])->name('applications.chat');
-        Route::get('note', [NotesController::class, 'index'])->name('applications.note');
+        //start note
+        #Route::get('note', [NotesController::class, 'index'])->name('applications.note');
+        Route::group(['prefix' => 'note'], function () {
+            Route::get('/', [NotesController::class, 'index'])->name('applications.note');
+            Route::post('/store', [NotesController::class, 'store'])->name('applications.store');
+            Route::get('/edit', [NotesController::class, 'edit'])->name('applications.edit');
+        });
+        //end note
+
         Route::get('email/inbox', [EmailController::class, 'index'])->name('applications.email');
         Route::get('email/read-email', [EmailController::class, 'readEmail'])->name('applications.readEmail');
         Route::get('contact/list', [ContactController::class, 'index'])->name('applications.contactList');

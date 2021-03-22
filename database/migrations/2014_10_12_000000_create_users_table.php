@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\User;
+use Carbon\Carbon;
 
 class CreateUsersTable extends Migration
 {
@@ -32,6 +33,8 @@ class CreateUsersTable extends Migration
             "username" => "user_admin",
             "email" => "admin@gmail.com",
             "password" => bcrypt("admin123"),
+            "created_at" => Carbon::now()->format('Y-m-d H:i:s'),
+            "updated_at" => Carbon::now()->format('Y-m-d H:i:s'),
         );
         User::insert($data);
     }

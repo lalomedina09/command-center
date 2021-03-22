@@ -46,6 +46,7 @@ class User extends Authenticatable
 
     public function notes()
     {
-        return $this->hasMany('App\Models\Note', 'user_id', 'id');
+        return $this->hasMany('App\Models\Note', 'user_id', 'id')
+                    ->orderBy('id', 'desc');
     }
 }

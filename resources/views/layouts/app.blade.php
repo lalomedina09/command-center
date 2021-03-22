@@ -35,6 +35,7 @@
             @include('layouts.partials._aside')
          @endauth
          @section('content')
+
          @show
          @auth()
             @include('layouts.partials._footer')
@@ -58,6 +59,8 @@
       {{-- Inject:js, Global Theme JS Bundle (used by all pages) --}}
       @yield('mapScript')
       @include('layouts.partials._scripts')
+        <input type="hidden" name="_token" id="token" value="{{ csrf_token()}}">
+
       {{-- Includable JS --}}
       @yield('scripts')
       {{-- Endinject --}}
