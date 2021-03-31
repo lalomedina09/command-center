@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="footer-copyright">
-                    <p>2020 @<a href="https://sovware.com/">Sovware</a>
+                    <p>2021 @<a href="/">LaloMedinaB</a>
                     </p>
                 </div>
             </div>
@@ -11,13 +11,13 @@
                 <div class="footer-menu text-right">
                     <ul>
                         <li>
-                            <a href="#">About</a>
+                            <a href="#">Nosotros</a>
                         </li>
                         <li>
-                            <a href="#">Team</a>
+                            <a href="#">Equipo</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>

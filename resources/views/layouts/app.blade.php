@@ -24,7 +24,7 @@
       {{-- Endinject --}}
       <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
    </head>
-   <body class="layout-light side-menu @auth() overlayScroll @endauth">
+   <body class="layout-dark side-menu @auth() overlayScroll @endauth">
       @auth()
       <div class="mobile-search"></div>
       <div class="mobile-author-actions"></div>
@@ -35,6 +35,7 @@
             @include('layouts.partials._aside')
          @endauth
          @section('content')
+
          @show
          @auth()
             @include('layouts.partials._footer')
@@ -51,13 +52,15 @@
             </div>
          </span>
       </div>
-      @include('layouts.partials._customizer')
+      {{--@include('layouts.partials._customizer')--}}
       @endauth
       <div class="overlay-dark-sidebar"></div>
       <div class="customizer-overlay"></div>
       {{-- Inject:js, Global Theme JS Bundle (used by all pages) --}}
       @yield('mapScript')
       @include('layouts.partials._scripts')
+        <input type="hidden" name="_token" id="token" value="{{ csrf_token()}}">
+
       {{-- Includable JS --}}
       @yield('scripts')
       {{-- Endinject --}}

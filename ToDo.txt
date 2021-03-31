@@ -1,0 +1,36 @@
+******************************************************************
+                                Notas
+******************************************************************
+[n] Recordar que al agregar un usuario agregar un registro en tabla de AppSettings
+[n]
+[n]
+[n]
+[n]
+[n]
+[n]
+    -
+    -
+    -
+    -
+[n]
+[n]
+[n]
+[n]
+[n]
+[n]
+**********************************************************************
+                                Tareas
+**********************************************************************
+[x]Configurar la forma de ver el admin izquierdo y superior (menus)
+[x]Quitar tabla de appsettings y modelo
+[x]
+[x]
+    -
+    -
+    -
+    -
+    -
+[x]
+[x]
+[x]
+[x]
