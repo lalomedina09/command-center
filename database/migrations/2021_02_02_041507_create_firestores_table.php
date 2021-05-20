@@ -25,6 +25,7 @@ class CreateFirestoresTable extends Migration
             $table->string('status')->nullable();
             $table->text('image')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
