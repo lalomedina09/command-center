@@ -18,7 +18,7 @@ class NotesController extends Controller
     public function  index(){
 
         $pageTitle = 'Mis Notas '.Auth::user()->name;
-        $pageDescription = 'lorem note extra';
+        $pageDescription = 'Generacion de notas personales por usuario';
         $notes = Auth::user()->notes;
         //$date = Carbon::now();
         //dd($date);
@@ -27,9 +27,6 @@ class NotesController extends Controller
 
     public function store(Request $request)
     {
-        #DB::beginTransaction();
-        #DB::commit();
-        //dd('llego a la linea 31');
         $note = new Note;
         $note->title = $request->title;
         $note->description = $request->description;
@@ -41,6 +38,27 @@ class NotesController extends Controller
 
         $notes = Auth::user()->notes;
 
+        $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
+    public function delete(Request $request)
+    {
+        $note = Note::findorfail($request->id);    
+        
+        $view = view('applications.notes.components.delete.content', compact('note'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
+    public function destroy($id)
+    {
+        $note = Note::findorfail($id);
+        $note->delete();
+
+        $notes = Auth::user()->notes;
+        
         $view = view('applications.notes.components.notes', compact('notes'))->render();
 
         return response()->json(['view' => $view]);

@@ -37,7 +37,7 @@
                </li>
             </ul>
          </li>
-         <li class="has-child">
+         {{--<li class="has-child">
             <a href="#">
             <span data-feather="layout" class="nav-icon"></span>
             <span class="menu-text">Layouts </span>
@@ -71,10 +71,11 @@
             <span class="menu-text">Changelog</span>
             <span class="badge badge-primary menuItem">1.1.0</span>
             </a>
-         </li>
+         </li>--}}
          <li class="menu-title m-top-30">
             <span>Applications </span>
          </li>
+         {{--
          <li class="has-child {{ request()->is('applications/email/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('applications/email/*') ? 'active' : ''}}">
             <span data-feather="mail" class="nav-icon"></span>
@@ -98,7 +99,7 @@
             <span data-feather="message-square" class="nav-icon"></span>
             <span class="menu-text">Chat</span>
             </a>
-         </li>
+         </li>--}}
          <li class="has-child {{ request()->is('applications/ecommerce/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('applications/ecommerce/*') ? 'active' : ''}}">
             <span data-feather="shopping-cart" class="nav-icon"></span>
@@ -155,7 +156,8 @@
                </li>
             </ul>
          </li>
-         <li class="has-child {{ request()->is('projects/*') ? 'open' : ''}}">
+         {{--
+            <li class="has-child {{ request()->is('projects/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('projects/*') ? 'active' : ''}}">
             <span data-feather="layout" class="nav-icon"></span>
             <span class="menu-text">Project</span>
@@ -180,6 +182,8 @@
                </li>
             </ul>
          </li>
+      --}}
+      {{--
          <li>
             <a href="{{ route('applications.calendar') }}"
                class="{{  Route::is('applications.calendar')  ? 'active' : '' }}">
@@ -245,6 +249,7 @@
                </li>
             </ul>
          </li>
+         --}}
          <li>
             <a href="{{ route('applications.note') }}" class="{{ Route::is('applications.note')  ? 'active': '' }}">
             <span data-feather="bookmark" class="nav-icon"></span>
@@ -264,6 +269,7 @@
             <span class="badge badge-success menuItem">New</span>
             </a>
          </li>
+         {{--
          <li class="has-child {{ request()->is('applications/import-export*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('applications/import-export*') ? 'active' : ''}}">
             <span data-feather="repeat" class="nav-icon"></span>
@@ -288,6 +294,7 @@
             <span class="badge badge-success menuItem">New</span>
             </a>
          </li>
+         --}}
          <li class="menu-title m-top-30">
             <span>CRUD</span>
          </li>
@@ -484,6 +491,7 @@
                </li>
             </ul>
          </li>
+         {{--
          <li class="has-child {{ request()->is('charts/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('charts/*') ? 'active' : ''}}">
             <span data-feather="bar-chart-2" class="nav-icon"></span>
@@ -504,7 +512,7 @@
                      href="{{ route('charts.peityChart') }}">Peity Charts</a>
                </li>
             </ul>
-         </li>
+         </li>--}}
          <li class="has-child {{ request()->is('forms/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('forms/*') ? 'active' : ''}}">
             <span data-feather="disc" class="nav-icon"></span>
@@ -559,7 +567,7 @@
                      class="{{ Route::is('pages.table.dataTable') ? 'active': '' }}">Data Table</a>
                </li>
             </ul>
-         </li>
+         </li>{{--
          <li class="has-child {{ request()->is('widget/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('widget/*') ? 'active' : ''}}">
             <span data-feather="server" class="nav-icon"></span>
@@ -582,6 +590,7 @@
                </li>
             </ul>
          </li>
+         
          <li class="has-child {{ request()->is('wizard/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('wizard/*') ? 'active' : ''}}">
             <span data-feather="square" class="nav-icon"></span>
@@ -611,7 +620,7 @@
                      class="{{ Route::is('wizard.wizardFive') ? 'active': '' }}">Wizard 5</a>
                </li>
             </ul>
-         </li>
+         </li>--}}
          <li class="has-child {{ request()->is('icons/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('icons/*') ? 'active' : ''}}">
             <span data-feather="grid" class="nav-icon"></span>
@@ -633,6 +642,7 @@
                </li>
             </ul>
          </li>
+         {{--
          <li class="has-child {{ request()->is('maps/*') ? 'open' : ''}}">
             <a href="#" class="{{ request()->is('maps/*') ? 'active' : ''}}">
             <span data-feather="map" class="nav-icon"></span>
@@ -653,7 +663,7 @@
                      class="{{ Route::is('maps.vectorMap') ? 'active' : '' }}">Vector Maps</a>
                </li>
             </ul>
-         </li>
+         </li>--}}
          <li class="menu-title m-top-30">
             <span>PAGES </span>
          </li>
@@ -664,6 +674,7 @@
             <span class="menu-text">Settings</span>
             </a>
          </li>
+         {{--  
          <li>
             <a href="{{ route('pages.gallery') }}" class="{{ Route::is('pages.gallery') ? 'active' : ''}}">
             <span data-feather="image" class="nav-icon"></span>
@@ -755,7 +766,7 @@
             <span data-feather="clock" class="nav-icon"></span>
             <span class="menu-text">Coming Soon</span>
             </a>
-         </li>
+         </li>--}}
       </ul>
    </div>
 </aside>

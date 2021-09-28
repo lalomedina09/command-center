@@ -50,6 +50,7 @@
 
         <!-- ends: .atbd-page-content -->
         @include('applications.notes.components.modal_add')
+        @include('applications.notes.components.delete.modal')
 
         <!-- incluir este div para pintar los msjs -->
         <div class="message-wrapper"></div>

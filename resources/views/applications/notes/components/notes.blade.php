@@ -8,7 +8,9 @@
                     <div class="note-action">
                         <div class="note-action__left">
                             <a href="#" class=""><span data-feather="star"></span></a>
-                            <a href="#"><span data-feather="trash-2"></span></a>
+                            <a href="#" onclick="delete_note({{ $note->id }})">
+                                <span data-feather="trash-2"></span>
+                            </a>
                         </div>
                         <div class="note-action__right">
                             <div class="label-dropdown dropdown dropdown-hover">

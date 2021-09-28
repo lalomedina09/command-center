@@ -274,7 +274,7 @@
                     </div>
                 </li>
                 <!-- ends: .nav-settings -->
-                <li class="nav-support">
+                <!--<li class="nav-support">
                     <div class="dropdown-custom">
                         <a href="javascript:;" class="nav-item-toggle">
                             <span data-feather="help-circle"></span></a>
@@ -317,21 +317,25 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li>-->
                 <!-- ends: .nav-support -->
-                <li class="nav-flag-select">
+                <!--<li class="nav-flag-select">
                     <div class="dropdown-custom">
                         <a href="javascript:;" class="nav-item-toggle">
                             <img src="{{ asset('img/spa.png') }}" alt=""
                                                                             class="rounded-circle"></a>
                         <div class="dropdown-wrapper dropdown-wrapper--small">
-                            <a disabled href=""><img src="{{ asset('img/ger.png') }}" alt=""> Aleman</a>
-                            <a href=""><img src="{{ asset('img/spa.png') }}" alt=""> Español</a>
-                            <a disabled href=""><img src="{{ asset('img/tur.png') }}" alt=""> Turco</a>
-                            <a disabled href=""><img src="{{ asset('img/eng.png') }}" alt=""> Ingles</a>
+                            <a disabled href="">
+                                <img src="{{ asset('img/ger.png') }}" alt=""> Aleman</a>
+                            <a href="">
+                                <img src="{{ asset('img/spa.png') }}" alt=""> Español</a>
+                            <a disabled href="">
+                                <img src="{{ asset('img/tur.png') }}" alt=""> Turco</a>
+                            <a disabled href="">
+                                <img src="{{ asset('img/eng.png') }}" alt=""> Ingles</a>
                         </div>
                     </div>
-                </li>
+                </li>-->
                 <!-- ends: .nav-flag-select -->
                 <li class="nav-author">
                     <div class="dropdown-custom">
