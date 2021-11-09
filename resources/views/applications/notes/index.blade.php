@@ -60,5 +60,7 @@
                 data-messageIcon="check">Boton success
             </button>
         </div>
+
+        <div class="notification-wrapper top-right"></div>
     </div>
 @endsection

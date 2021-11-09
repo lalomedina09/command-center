@@ -100,7 +100,12 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/store', [NotesController::class, 'store'])->name('applications.note.store');
             Route::post('/delete', [NotesController::class, 'delete'])->name('applications.note.delete');
             Route::post('/destroy/{id}', [NotesController::class, 'destroy'])->name('applications.note.destroy');
+            Route::post('/label/update/{id}', [NotesController::class, 'label_update'])->name('applications.note.label.update');
+            Route::post('/favorite/update/{id}', [NotesController::class, 'favorite_update'])->name('applications.note.favorite.update');
             Route::get('/edit', [NotesController::class, 'edit'])->name('applications.note.edit');
+            Route::put('/update', [NotesController::class, 'update'])->name('applications.note.update');
+            Route::get('/list-favorites', [NotesController::class, 'listFavorites'])->name('applications.note.listfavorites');
+            Route::get('/list-deletes', [NotesController::class, 'listDeletes'])->name('applications.note.listdeletes');
         });
 
         Route::get('email/inbox', [EmailController::class, 'index'])->name('applications.email');

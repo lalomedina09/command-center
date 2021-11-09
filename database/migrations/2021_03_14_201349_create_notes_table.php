@@ -19,7 +19,7 @@ class CreateNotesTable extends Migration
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('label')->nullable();
-            $table->integer('favorite')->nullable();
+            $table->boolean('favorite')->default(0);
             $table->timestamps();
             $table->softDeletes();
             $table->integer('user_id')->unsigned()->nullable();

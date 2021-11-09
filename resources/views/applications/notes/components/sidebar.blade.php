@@ -9,6 +9,7 @@
                 <ul class="list-unstyled">
                     <li><a href="" class="active"><span data-feather="edit"></span> Todos</a></li>
                     <li><a href=""><span data-feather="star"></span> Favoritos</a></li>
+                    <li><a href=""><span data-feather="trash-2"></span> Papelera</a></li>
                 </ul>
             </div>
             <div class="note-labels">

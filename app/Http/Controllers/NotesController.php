@@ -25,6 +25,24 @@ class NotesController extends Controller
         return view('applications.notes.index', compact('pageTitle', 'pageDescription', 'notes'));
     }
 
+    public function  listFavorites(){
+
+        $notes = Auth::user()->notes->where('favorite', true);
+
+        $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
+    public function  listDeletes(){
+
+        $notes = Auth::user()->notes->where('favorite', true);
+
+        $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
     public function store(Request $request)
     {
         $note = new Note;
@@ -36,17 +54,13 @@ class NotesController extends Controller
         $note->updated_by = Auth::user()->id;
         $note->save();
 
-        $notes = Auth::user()->notes;
-
-        $view = view('applications.notes.components.notes', compact('notes'))->render();
-
-        return response()->json(['view' => $view]);
+        return response()->json(['view' => $this->returnNotes()]);
     }
 
     public function delete(Request $request)
     {
-        $note = Note::findorfail($request->id);    
-        
+        $note = Note::findorfail($request->id);
+
         $view = view('applications.notes.components.delete.content', compact('note'))->render();
 
         return response()->json(['view' => $view]);
@@ -57,10 +71,52 @@ class NotesController extends Controller
         $note = Note::findorfail($id);
         $note->delete();
 
+        return response()->json(['view' => $this->returnNotes()]);
+    }
+
+    public function label_update($id, Request $request)
+    {
+        $note = Note::findorfail($id);
+        $note->label = $request->label;
+        $note->update();
+
+        return response()->json(['view' => $this->returnNotes()]);
+    }
+
+    public function favorite_update($id, Request $request)
+    {
+        $note = Note::findorfail($id);
+        $note->favorite = $request->favorite;
+        $note->update();
+
+        return response()->json(['view' => $this->returnNotes()]);
+    }
+
+    public function returnNotes()
+    {
         $notes = Auth::user()->notes;
-        
-        $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return $view = view('applications.notes.components.notes', compact('notes'))->render();
+    }
+
+    public function edit($id, Request $request)
+    {
+        $note = Note::findorfail($id);
+
+        $view = view('applications.notes.components.edit.content', compact('note'))->render();
 
         return response()->json(['view' => $view]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $note = Note::findorfail($id);
+
+        $note->title = $request->title;
+        $note->description = $request->description;
+        $note->label = $request->label;
+        $note->update();
+
+        return response()->json(['view' => $this->returnNotes()]);
     }
 }
