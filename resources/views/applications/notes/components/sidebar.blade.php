@@ -7,18 +7,44 @@
             </div>
             <div class="note-types">
                 <ul class="list-unstyled">
-                    <li><a href="" class="active"><span data-feather="edit"></span> Todos</a></li>
-                    <li><a href=""><span data-feather="star"></span> Favoritos</a></li>
-                    <li><a href=""><span data-feather="trash-2"></span> Papelera</a></li>
+                    <li>
+                        <a href="#" onclick="notesall()" class="active">
+                        <span data-feather="edit"></span> Todos</a>
+                    </li>
+                    <li>
+                        <a onclick="notesListFavorites()" href="#">
+                            <span data-feather="star"></span> Favoritos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="notesListDeletes()">
+                            <span data-feather="trash-2"></span> Papelera
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="note-labels">
                 <p><span data-feather="tag"></span> Etiquetas</p>
                 <ul class="list-unstyled">
-                    <li><a class="label-personal" href=""><span></span> Personal</a></li>
-                    <li><a class="label-work" href=""><span></span> Trabajo</a></li>
-                    <li><a class="label-social" href=""><span></span> Social</a></li>
-                    <li><a class="label-important" href=""><span></span> Importante</a></li>
+                    <li>
+                        <a class="label-personal" href="#" onclick="notesListLabels('personal')">
+                            <span></span> Personal
+                        </a>
+                    </li>
+                    <li>
+                        <a class="label-work" href="#" onclick="notesListLabels('work')"
+                        ><span></span> Trabajo
+                    </a>
+                    </li>
+                    <li>
+                        <a class="label-social" href="#" onclick="notesListLabels('social')"><span></span> Social
+                    </a>
+                    </li>
+                    <li>
+                        <a class="label-important" href="#" onclick="notesListLabels('important')">
+                            <span></span> Importante
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

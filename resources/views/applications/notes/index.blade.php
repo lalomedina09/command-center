@@ -10,7 +10,9 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="breadcrumb-main">
-                                <h4 class="text-capitalize breadcrumb-title">Notas</h4>
+                                <h4 class="text-capitalize breadcrumb-title">
+                                    Todas Mis Notas
+                                </h4>
                                 <div class="breadcrumb-action justify-content-center flex-wrap">
                                     @include('applications.components.header.filter-date')
                                     @include('applications.components.header.export')
@@ -51,6 +53,7 @@
         <!-- ends: .atbd-page-content -->
         @include('applications.notes.components.modal_add')
         @include('applications.notes.components.delete.modal')
+        @include('applications.notes.components.modal-generic')
 
         <!-- incluir este div para pintar los msjs -->
         <div class="message-wrapper"></div>

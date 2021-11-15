@@ -14,10 +14,12 @@
                                 class="text-capitalize mb-md-30 mb-15 d-flex align-items-center justify-content-md-start justify-content-center">
                                 <img class="svg dark" src="{{ asset('img/Logo_Dark.png') }}" alt="">
                             </div>
-                            <h1>Centro de mando</h1>
+                            <h1>
+                                Centro de administracion personal
+                            </h1>
                         </div><!-- End: .signUP-admin-left__content  -->
                         <div class="signUP-admin-left__img">
-                            <img class="img-fluid svg" src="{{ asset('img/svg/my-admin.png') }}" alt="img"/>
+                            <!--<img class="img-fluid svg" src="{{ asset('img/svg/my-admin.png') }}" alt="img"/>-->
                         </div><!-- End: .signUP-admin-left__img  -->
                     </div><!-- End: .signUP-admin-left  -->
                 </div><!-- End: .col-xl-4  -->
@@ -26,9 +28,9 @@
                         <div
                             class="signUp-topbar d-flex align-items-center justify-content-md-end justify-content-center mt-md-0 mb-md-0 mt-20 mb-1">
                             <p class="mb-0">
-                                Don't have an account?
+                                ¿No tienes cuenta?
                                 <a href="{{ route('register') }}" class="color-primary">
-                                    Sign up
+                                    Crear Cuenta
                                 </a>
                             </p>
                         </div><!-- End: .signUp-topbar  -->
@@ -77,26 +79,29 @@
                                                             <input class="checkbox" type="checkbox"
                                                                    id="check-1" {{ old('check-1') ? 'checked' : '' }}>
                                                             <label for="check-1">
-                                                                <span class="checkbox-text">Keep me logged in</span>
+                                                                <span class="checkbox-text">Mantener sesión abierta</span>
                                                             </label>
                                                         </div>
-                                                        <a href="{{ route('password.request') }}">forget password</a>
+                                                        <a href="{{ route('password.request') }}">
+                                                            Olvidaste tu contraseña
+                                                        </a>
                                                     </div>
                                                     <div
                                                         class="button-group d-flex pt-1 justify-content-md-start justify-content-center">
                                                         <button
                                                             class="btn btn-primary btn-default btn-squared mr-15 text-capitalize lh-normal px-50 py-15 signIn-createBtn ">
-                                                            sign in
+                                                            Ingresar
                                                         </button>
                                                     </div>
                                                 </form>
                                                 <p class="social-connector text-center mb-sm-25 mb-15  mt-sm-30 mt-20">
-                                                    <span>Or</span></p>
+                                                    <span>O tambien</span></p>
                                                 <div
                                                     class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                     <ul class="signUp-socialBtn">
                                                         <li>
-                                                            <a href="#" class="btn text-dark px-30"><img class="svg" src="{{ asset('img/svg/google.svg') }}" alt="img"/> Sign up with Google
+                                                            <a href="#" class="btn text-dark px-30"><img class="svg" src="{{ asset('img/svg/google.svg') }}" alt="img"/>
+                                                                Acceder con Google
                                                             </a>
                                                         </li>
                                                         <li>

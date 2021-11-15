@@ -25,7 +25,7 @@
                             <a href="#" onclick="delete_note({{ $note->id }})">
                                 <span data-feather="trash-2"></span>
                             </a>
-                            <a href="#" onclick="delete_note({{ $note->id }})">
+                            <a href="#" onclick="note_edit({{ $note->id }})">
                                 <span data-feather="edit"></span>
                             </a>
                         </div>

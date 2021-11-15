@@ -34,11 +34,31 @@ class NotesController extends Controller
         return response()->json(['view' => $view]);
     }
 
-    public function  listDeletes(){
+    public function  listAll()
+    {
 
-        $notes = Auth::user()->notes->where('favorite', true);
+        $notes = Auth::user()->notes;
 
         $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
+    public function listLabel($label)
+    {
+        $notes = Auth::user()->notes->where('label', $label);
+
+        $view = view('applications.notes.components.notes', compact('notes'))->render();
+
+        return response()->json(['view' => $view]);
+    }
+
+    public function  listDeletes(){
+        $user_id = Auth::user()->id;
+        //$notes = Auth::user()->notes->withTrashed();
+        $notes = Note::where('user_id', $user_id)->onlyTrashed()->get();
+
+        $view = view('applications.notes.components.notes-deletes', compact('notes'))->render();
 
         return response()->json(['view' => $view]);
     }
@@ -74,6 +94,17 @@ class NotesController extends Controller
         return response()->json(['view' => $this->returnNotes()]);
     }
 
+    public function restore($id)
+    {
+        $note = Note::withTrashed()->findorfail($id);
+        $user_id = Auth::user()->id;
+        $note->restore();
+
+        $notes = Note::where('user_id', $user_id)->onlyTrashed()->get();
+        $view = view('applications.notes.components.notes-deletes', compact('notes'))->render();
+        return response()->json(['view' => $view]);
+    }
+
     public function label_update($id, Request $request)
     {
         $note = Note::findorfail($id);
@@ -99,19 +130,18 @@ class NotesController extends Controller
         return $view = view('applications.notes.components.notes', compact('notes'))->render();
     }
 
-    public function edit($id, Request $request)
+    public function edit(Request $request)
     {
-        $note = Note::findorfail($id);
-
-        $view = view('applications.notes.components.edit.content', compact('note'))->render();
+        $note = Note::findorfail($request->id);
+        $labels = Controller::listLabelNotes();
+        $view = view('applications.notes.components.edit.content', compact('note', 'labels'))->render();
 
         return response()->json(['view' => $view]);
     }
 
-    public function update($id, Request $request)
+    public function update(Request $request)
     {
-        $note = Note::findorfail($id);
-
+        $note = Note::find($request->id);
         $note->title = $request->title;
         $note->description = $request->description;
         $note->label = $request->label;
